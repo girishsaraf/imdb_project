@@ -77,12 +77,20 @@ WSGI_APPLICATION = 'imdb_project.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE':'django.db.backends.mysql',
+    #     'NAME':'imdb_schema',
+    #     'HOST':'127.0.0.1',
+    #     'USER':'root',
+    #     'PASSWORD':'5NAXHPCV',
+    #     'PORT': '3306'
+    # }
     'default': {
         'ENGINE':'django.db.backends.mysql',
-        'NAME':'imdb_schema',
-        'HOST':'127.0.0.1',
-        'USER':'root',
-        'PASSWORD':'5NAXHPCV',
+        'NAME':'kj7gy1wareliy3jn',
+        'HOST':'e11wl4mksauxgu1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        'USER':'ff1lt04wejzbtvfx',
+        'PASSWORD':'ih4cg9hyu7f733zy',
         'PORT': '3306'
     }
 }
