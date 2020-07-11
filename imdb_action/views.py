@@ -79,7 +79,7 @@ def search_movie_by_director(request):
 @csrf_exempt
 def import_movie_data_from_json(request):
     try:
-        with open("/Users/girishsaraf/Desktop/Projects/IMDB_Project/imdb.json", 'r') as f:
+        with open("/Users/girishsaraf/Desktop/imdb.json", 'r') as f:
             data = json.load(f)
         for row in data:
             movie_obj = MovieStore(name=row['name'], imdb_score=row['imdb_score'], genre=",".join(row['genre']), number_99popularity=row['99popularity'], director=row['director'])
