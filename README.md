@@ -12,3 +12,4 @@
 2. Delete Movie by ID
 3. Delete Movie by Name (#Optional API)
 4. Edit Movie Details
+5. Import movie data from JSON
