@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
+#import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'imdb_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.mysql',
-        'NAME':'kj7gy1wareliy3jn',
-        'HOST':'e11wl4mksauxgu1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        'USER':'ff1lt04wejzbtvfx',
-        'PASSWORD':'ih4cg9hyu7f733zy',
+        'NAME':'imdb_schema',
+        'HOST':'127.0.0.1',
+        'USER':'root',
+        'PASSWORD':'5NAXHPCV',
         'PORT': '3306'
     }
 }
@@ -126,4 +126,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
