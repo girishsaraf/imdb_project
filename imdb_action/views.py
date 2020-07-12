@@ -111,19 +111,3 @@ def search_movie_by_director(request):
     except Exception as e:
         print(str(e))
         return HttpResponse(http_response_smart({}, "Error: " + str(e), "fail"), status = 403)
-
-
-# This function was created to load the JSON file, 
-# into the database, since MySQL workbench was unable to process it automatically
-@csrf_exempt
-def import_movie_data_from_json(request):
-    try:
-        with open("/Users/girishsaraf/Desktop/imdb.json", 'r') as f:
-            data = json.load(f)
-        for row in data:
-            movie_obj = MovieStore(name=row['name'], imdb_score=row['imdb_score'], genre=",".join(row['genre']), number_99popularity=row['99popularity'], director=row['director'])
-            movie_obj.save()
-        return HttpResponse(http_response_smart({}, "Data Imported successfully", "success"), status=200)
-    except Exception as e:
-        print(str(e))
-        return HttpResponse(http_response_smart({}, "Error: " + str(e), "fail"), status=403)
