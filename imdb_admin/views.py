@@ -94,7 +94,8 @@ def edit_movie_details(request):
                 if new_value in old_value.split(','):
                     return HttpResponse(http_response_smart({}, "This Genre already exists for this movie", 'success'), status=200)
                 else:
-                    movie_obj.genre = ",".join(old_value.split(",").append(new_value))
+                    old_value = old_value.split(",") + [new_value]
+                    movie_obj.genre = ",".join(old_value)
             if param_name == "director":
                 old_value = movie_obj.director
                 if old_value == new_value:
